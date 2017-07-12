@@ -17,8 +17,6 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
 
     private static final String TAGS = DatabaseSqlite.class.getSimpleName();
 
-    private static final String Tags = DatabaseSqlite.class.getSimpleName();
-
     public DatabaseSqlite(Context context) {
         super(context, Constant.DATABASE.DB_NAME, null, Constant.DATABASE.DB_VERSION);
     }
@@ -28,7 +26,7 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
         try {
             db.execSQL(Constant.DATABASE.CREATE_TABLE_QUERY);
         }catch (SQLiteException ex){
-            Log.d(Tags, ex.getMessage().toString());
+            Log.d(TAGS, ex.getMessage().toString());
         }
     }
 
@@ -77,12 +75,12 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
             if (cursor.moveToFirst()){
                 do {
 
-                    Result listData = new Result();
-                    listData.setNama(cursor.getColumnName(cursor.getColumnIndex(Constant.DATABASE.NAMA)));
+                    Result resultList = new Result();
+                    resultList.setNama(cursor.getColumnName(cursor.getColumnIndex(Constant.DATABASE.NAMA)));
 
-                    listData.setPicture(Utils.getBitmapFromByte(cursor.getBlob(cursor.getColumnIndex(Constant.DATABASE.IMAGE))));
+                    resultList.setPicture(Utils.getBitmapFromByte(cursor.getBlob(cursor.getColumnIndex(Constant.DATABASE.IMAGE))));
 
-                    dataList.add(listData);
+                    dataList.add(resultList);
                 }while (cursor.moveToNext());
             }
         }
