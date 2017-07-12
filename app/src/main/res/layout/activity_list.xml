@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a10.palembangtour.UI.ListActivity">
+
+    <include
+        android:id="@+id/toolbarList"
+        layout="@layout/toolbar" />
+
+    <ProgressBar
+        android:id="@+id/progres_data"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/toolbarList"
+        android:secondaryProgressTint="@color/colorPrimary"
+        android:visibility="gone"
+        android:padding="@dimen/padding" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarList">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:scrollbars="vertical" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

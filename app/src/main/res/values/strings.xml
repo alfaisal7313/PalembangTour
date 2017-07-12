@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Palembang Tour</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_info">Tentang</string>
+    <string name="action_about">Informasi</string>
+    <string name="action_exit">Exit</string>
+    <string name="wstAlam">Wisata Alam</string>
+    <string name="wstSajarahBudaya">Wisata Sejarah dan Budaya</string>
+    <string name="wstBuatan">Wisata Buatan Manusia</string>
+    <string name="wstMakamSultan">Wisata Makam Kesultanan</string>
+    <string name="wstKuliner">Wisata Kuliner</string>
+    <string name="refresh">Refresh</string>
+</resources>

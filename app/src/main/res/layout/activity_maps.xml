@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/appBarLayout"
+        android:elevation="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:layout_below="@id/appBarLayout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <FrameLayout
+            android:id="@+id/map_frame"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:background="@drawable/bg_rounded_corners_white"
+        android:clickable="true"
+        android:layout_margin="@dimen/padding"
+        android:id="@+id/searcharea"
+        android:padding="@dimen/padding"
+        android:alpha="0.9">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_map_marker"
+            android:id="@+id/booking1ImageView1"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/booking1ImageView1"
+            android:id="@+id/booking1View1"
+            android:layout_alignEnd="@id/booking1ImageView1"
+            android:layout_alignStart="@id/booking1ImageView1"
+            android:gravity="center_horizontal">
+
+            <View
+                android:background="@drawable/dash_line_divider_vertical"
+                android:layout_height="20dp"
+                android:layout_width="15dp"
+                android:layerType="software"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_map_marker_radius"
+            android:layout_below="@id/booking1View1"
+            android:id="@+id/booking1ImageView4"/>
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentRight="true"
+            android:id="@+id/clearfrom"
+            android:visibility="invisible"
+            android:layout_alignBottom="@id/booking1ImageView1"
+            android:layout_alignTop="@id/booking1ImageView1"/>
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_close"
+            android:layout_below="@id/booking1View1"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:id="@+id/clearto"
+            android:layout_alignBottom="@id/booking1ImageView4"/>
+
+        <AutoCompleteTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:ems="10"
+            android:background="@android:color/transparent"
+            android:layout_toRightOf="@id/booking1ImageView1"
+            android:layout_toLeftOf="@id/clearfrom"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@id/booking1ImageView1"
+            android:layout_alignTop="@id/booking1ImageView1"
+            android:singleLine="true"
+            android:hint="Set Lokasi"
+            android:id="@+id/booking2_from"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <View
+            android:background="?android:attr/dividerVertical"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/booking1View1"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@id/booking2_from"/>
+
+        <AutoCompleteTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:ems="10"
+            android:background="@android:color/transparent"
+            android:layout_toRightOf="@id/booking1ImageView4"
+            android:layout_below="@id/booking1View1"
+            android:layout_toLeftOf="@id/clearto"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@id/booking1ImageView4"
+            android:singleLine="true"
+            android:hint="Set Tujuan"
+            android:id="@+id/booking2_dest"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:layout_height="1dp"
+            android:layout_width="1dp"
+            android:ems="1"
+            android:focusable="true"
+            android:id="@+id/fok"
+            android:cursorVisible="false"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_my_location"
+        app:fabSize="mini"
+        app:backgroundTint="@android:color/white"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+</RelativeLayout>
+

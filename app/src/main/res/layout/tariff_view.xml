@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	android:orientation="vertical">
+
+	<android.support.design.widget.FloatingActionButton
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/tariffviewMyLoc"
+		android:src="@drawable/ic_crosshairs_gps"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="@dimen/activity_vertical_margin"
+		android:layout_marginBottom="@dimen/activity_vertical_margin"
+		android:alpha="0.7"
+		android:background="@drawable/btn_mylocation"/>
+</RelativeLayout>
+
